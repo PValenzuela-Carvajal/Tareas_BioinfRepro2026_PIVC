@@ -1,4 +1,4 @@
-# Scipt Ejercicio 2.3 
+# Scipt Ejercicio 2.4
 
 This folder contains the scripts used for the Stacks analysis. 
 
