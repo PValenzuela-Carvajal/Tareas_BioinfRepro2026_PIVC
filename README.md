@@ -8,10 +8,10 @@ The repository is organized into **folders corresponding to each session**, maki
 
 ```text
 /
-├── Session_01/
-├── Session_02/
-├── Session_03/
-├── Session_04/
+├── Session 2.1/
+├── Session 2.2/
+├── Session 2.3/
+├── Session 3.1/
 ├── ...
 └── README.md
 ```
