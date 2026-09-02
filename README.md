@@ -1,9 +1,13 @@
 # Bioinformatics and Reproducible Research for Genomic Analysis
 
 **Course:** Bioinformatics and Reproducible Research for Genomic Analysis
+
 **Student:** Pablo Ignacio Valenzuela Carvajal
+
 **Graduate Program:** Master's in Biostatistics
+
 **Year:** 2026
+
 **Professor:** Dr. Ricardo Verdugo
 
 ## Repository Objective
