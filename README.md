@@ -1,10 +1,20 @@
-# Course Repository
+# Bioinformatics and Reproducible Research for Genomic Analysis
 
-This repository contains the materials, code, exercises, and resources used throughout the different sessions of the course "Bioinformatica reproducible para analisis genomicos".
+**Course:** Bioinformatics and Reproducible Research for Genomic Analysis
+**Student:** Pablo Ignacio Valenzuela Carvajal
+**Graduate Program:** Master's in Biostatistics
+**Year:** 2026
+**Professor:** Dr. Ricardo Verdugo
 
-The repository is organized into **folders corresponding to each session**, making it easier to navigate and access the materials covered in each class.
+## Repository Objective
+
+This repository contains the materials, code, exercises, and resources used throughout the different sessions of the course **"Bioinformatics and Reproducible Research for Genomic Analysis."**
+
+The main objective of this repository is to organize and document the practical materials developed during the course, facilitating the reproduction and application of the genomic analysis workflows presented in each session.
 
 ## Repository Structure
+
+The repository is organized into **folders corresponding to each session**, making it easier to navigate and access the materials covered in each class.
 
 ```text
 /
