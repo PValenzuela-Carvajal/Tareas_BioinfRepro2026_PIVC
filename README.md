@@ -1,4 +1,4 @@
-# Bioinformatics and Reproducible Research for Genomic Analysis
+# Bioinformatics and Reproducible Research for Genomic Analysis Repository
 
 **Course:** Bioinformatics and Reproducible Research for Genomic Analysis
 
