@@ -12,6 +12,8 @@ date-format: 'D [de] MMMM, YYYY' # el formato de la fecha (hay varias combinacio
 output: html_document # formato del output
 lang: 'es' # Lenguaje del documento
 title-block-style: 'none' # Esta opción elimina los títulos de autor y fecha de publicación 
+toc: true
+toc-depth: 2
 ---
 
 ## Ejercicio 1 
@@ -55,7 +57,7 @@ Carga en R el archivo `PracUni1Ses3/maices/meta/maizteocintle_SNP50k_meta_extend
 
 
 
-meta_maiz<-read.delim(file="//wsl.localhost/Ubuntu/home/pablo/BioinfinvRepro/Unidad1/Sesion3/PracUni1Ses3/maices/meta/maizteocintle_SNP50k_meta_extended.txt",
+meta_maiz<-read.delim(file="./PracUni1Ses3/maices/meta/maizteocintle_SNP50k_meta_extended.txt",
            header=TRUE, 
            sep="\t",
            fileEncoding="latin1")
@@ -69,7 +71,7 @@ Escribe un for loop para que divida 35 entre 1:10 e imprima el resultado en la c
 
 ```{r}
 for (i in 1:10) {
-  div <- i/35
+  div <- 35/i
   print(div)
 }
 ```
@@ -79,10 +81,10 @@ Modifica el loop anterior para que haga las divisiones solo para los números no
 ```{r}
 for (i in 1:10) {
   if (i%%2) {
-    div <- i/35
-    cat("la división de",i,"por 35 es:",div,"\n")
+    div <- 35/i
+    cat("la división de 35 por",i,"es:",div,"\n")
   } else {
-  cat("El numero es par:", i,"\n")
+  cat("El numero es par(",i, "), por lo que no se realizará la división \n")
 } } 
 ```
 
@@ -96,7 +98,7 @@ resultado <- data.frame(
 
 for (i in 1:10) {
   
-    div <- i / 35
+    div <- 35/i
     resultado <- rbind(resultado, data.frame(texto = paste("resultado para", i),
                                              resultado = div))
   }
@@ -114,43 +116,43 @@ Abre en RStudio el script `PracUni1Ses3/mantel/bin/1.IBR_testing.r`. Este script
 
 Lee el código del script y determina:
 
-* ¿qué hacen los dos for loops del script?
+**¿Qué hacen los dos for loops del script?**
 
-El primer loop for hace lo siguiente 
+El primer bucle `for` hace lo siguiente:
 
-Construye la ruta al archivo de salida de Circuitscape (Balpina_<escenario>_resistances.out), que contiene las distancias efectivas (effective distances) entre puntos focales bajo ese modelo de resistencia.
+ 1) Construye la ruta al archivo de salida de Circuitscape (Balpina_<escenario>_resistances.out), que contiene las distancias efectivas (effective distances) entre puntos bajo ese modelo de resistencia.
 
-Lee la matriz de distancias efectivas con la función propia read.effdist(), reordenando las poblaciones según el orden de popNames (el de Stacks).
+ 2) Lee la matriz de distancias efectivas con la función personal `read.effdist()`, reordenando las poblaciones según el orden de popNames.
 
-Calcula la media de distancia efectiva por población (apply(..., 2, mean)).
+ 3) Calcula la media de distancia efectiva por población `(apply(..., 2, mean))`.
 
-Guarda en el entorno global dos objetos por cada escenario: B.<escenario> (matriz de distancias efectivas) y B.mean.<escenario> (vector de medias). 
+ 4) Guarda en el entorno global dos objetos por cada escenario: B.<escenario> (matriz de distancias efectivas) y B.mean.<escenario> (vector de medias). 
 
-y el siguiente loop for 
+y el siguiente bucle `for`
 
-Ejecuta un test de Mantel (mantel.rtest del paquete ade4, con 10 000 permutaciones) entre la matriz de distancias efectivas B.<escenario> y la matriz de Fst linealizada (B.FstLin = Fst/(1-Fst)).
+ 1) Ejecuta un test de Mantel (`mantel.rtest` del paquete `ade4`, con 10000 permutaciones) entre la matriz de distancias efectivas B.<escenario> y la matriz de Fst (B.FstLin = Fst/(1-Fst)).
 
-Imprime los resultados.
+ 2) Imprime los resultados.
 
-Genera un gráfico de dispersión con la función propia DistPlot().
+ 3) Genera un gráfico de dispersión con la función personal `DistPlot()`.
 
-Extrae el p-valor y la r de Mantel observada, redondeados.
+ 4) Extrae el p-valor y la r de Mantel observada, redondeados.
 
-Acumula los resultados en la matriz IBRresults (una fila por escenario: nombre, p-valor, r).
+ 5) Acumula los resultados en la matriz `IBRresults` (una fila por escenario: nombre, p-valor, r).
 
-* ¿qué paquetes necesitas para correr el script?
+**¿Qué paquetes necesitas para correr el script?**
 
 Los paquetes necesarios para correr el script son `ade4`, `ggplot2` y `sp`
 
-* ¿qué archivos necesitas para correr el script?
+**¿Qué archivos necesitas para correr el script?**
 
 Se necesitan los archivos: 
 
-- `surveyed_mountains.tsv`
-- `BerSS.sumstats.tsv`
-- `BerSS.fst_summary.tsv`
-- `Balpina_focalpoints.txt`
-- Los .out generados en `/redist`
+* `surveyed_mountains.tsv`
+* `BerSS.sumstats.tsv`
+* `BerSS.fst_summary.tsv`
+* `Balpina_focalpoints.txt`
+* Los .out generados en `/redist`
 
 ## Ejercicio 7 
 
@@ -183,20 +185,41 @@ source("1.1 IBR Partial.r")
 
 Escribe un script que debe estar guardado en `PracUni1Ses3/maices/bin` y llamarse `ExplorandoMaiz.R`, que 1) cargue en R el archivo `PPracUni1Ses3maices/meta/maizteocintle_SNP50k_meta_extended.txt` y 2) responda lo siguiente.
 
-* ¿Qué tipo de objeto creamos al cargar la base?
-* ¿Cómo se ven las primeras 6 líneas del archivo?
-* ¿Cuántas muestras hay?
-* ¿De cuántos estados se tienen muestras?
-* ¿Cuántas muestras fueron colectadas antes de 1980?
-* ¿Cuántas muestras hay de cada raza?
-* En promedio ¿a qué altitud fueron colectadas las muestras?
-* ¿Y a qué altitud máxima y mínima fueron colectadas?
-* Crea una nueva df de datos sólo con las muestras de la raza Olotillo
-* Crea una nueva df de datos sólo con las muestras de la raza Reventador, Jala y Ancho
-* Escribe la matriz anterior a un archivo llamado "submat.cvs" en /meta.
+**¿Qué tipo de objeto creamos al cargar la base?**
+Se crea un objeto de clase `data.frame`
+
+**¿Cómo se ven las primeras 6 líneas del archivo?**
+Se incluye en la salida del script, es una base de datos con 22 variables
+
+**¿Cuántas muestras hay?**
+Hay un total de 165 muestras
+
+**¿De cuántos estados se tienen muestras?**
+De un total de 16 estados
+
+**¿Cuántas muestras fueron colectadas antes de 1980?**
+8 muestras fueron colectadas antes de 1980, luego de remover los NA
+
+**¿Cuántas muestras hay de cada raza?**
+Se puede observar en el codigo, la tabla corresponde a la linea `>table(tabla_maices$Raza)`
+
+**En promedio ¿a qué altitud fueron colectadas las muestras?**
+El promedio de altura fue de 1519.242 msnm.
+
+**¿Y a qué altitud máxima y mínima fueron colectadas?**
+La altura minima fue de 5 msnm y la altura maxima fue de 2769 msnm. 
+
+**Crea una nueva df de datos sólo con las muestras de la raza Olotillo**
+
+**Crea una nueva df de datos sólo con las muestras de la raza Reventador, Jala y Ancho**
+
+**Escribe la matriz anterior a un archivo llamado "submat.cvs" en /meta.**
+
+Los ultimos tres ejercicios se pueden observar en el codigo a continuación
 
 ```{r}
 setwd("./PracUni1Ses3/maices/bin")
+
 source("ExplorandoMaiz.R", echo = TRUE, print.eval = TRUE)
 ```
 
