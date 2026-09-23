@@ -19,7 +19,8 @@ toc: true
 toc-depth: 2
 ---
 
-## Ejercicio 1 
+
+## Ejercicio 1
 
 Crea una variable con el logaritmo base 10 de 50 y súmalo a otra variable cuyo valor sea igual a 5.
 
@@ -87,11 +88,11 @@ for (i in 1:10) {
     div <- 35/i
     cat("la división de 35 por",i,"es:",div,"\n")
   } else {
-  cat("El numero es par(",i, "), por lo que no se realizará la división \n")
+  cat("El número es par (",i, "), por lo que no se realizará la división \n")
 } } 
 ```
 
-Modifica el loop anterior para que los resultados de correr todo el loop se guarden en una df de dos columnas, la primera debe tener el texto "resultado para x" (donde x es cada uno de los elementos del loop) y la segunda el resultado correspondiente a cada elemento del loop. 
+Modifica el loop anterior para que los resultados de correr todo el loop se guarden en una df de dos columnas, la primera debe tener el texto "resultado para x" (donde x es cada uno de los elementos del loop) y la segunda el resultado correspondiente a cada elemento del loop.
 
 ```{r}
 resultado <- data.frame(
@@ -113,7 +114,7 @@ resultado
 
 
 
-## Ejercicio 6 
+## Ejercicio 6
 
 Abre en RStudio el script `PracUni1Ses3/mantel/bin/1.IBR_testing.r`. Este script realiza un análisis de [aislamiento por resistencia](http://www.bioone.org/doi/abs/10.1554/05-321.1) con Fst calculadas con ddRAD en *Berberis alpina*.
 
@@ -129,7 +130,7 @@ El primer bucle `for` hace lo siguiente:
 
  3) Calcula la media de distancia efectiva por población `(apply(..., 2, mean))`.
 
- 4) Guarda en el entorno global dos objetos por cada escenario: B.<escenario> (matriz de distancias efectivas) y B.mean.<escenario> (vector de medias). 
+ 4) Guarda en el entorno global dos objetos por cada escenario: B.<escenario> (matriz de distancias efectivas) y B.mean.<escenario> (vector de medias).
 
 y el siguiente bucle `for`
 
@@ -149,7 +150,7 @@ Los paquetes necesarios para correr el script son `ade4`, `ggplot2` y `sp`
 
 **¿Qué archivos necesitas para correr el script?**
 
-Se necesitan los archivos: 
+Se necesitan los archivos:
 
 * `surveyed_mountains.tsv`
 * `BerSS.sumstats.tsv`
@@ -157,7 +158,7 @@ Se necesitan los archivos:
 * `Balpina_focalpoints.txt`
 * Los .out generados en `/redist`
 
-## Ejercicio 7 
+## Ejercicio 7
 
 Escribe una función llamada calc.tetha que te permita calcular tetha dados Ne y u como argumentos. Recuerda que tetha=4Neu.
 
@@ -186,31 +187,39 @@ source("1.1 IBR Partial.r")
 
 ## Ejercicio 9
 
-Escribe un script que debe estar guardado en `PracUni1Ses3/maices/bin` y llamarse `ExplorandoMaiz.R`, que 1) cargue en R el archivo `PPracUni1Ses3maices/meta/maizteocintle_SNP50k_meta_extended.txt` y 2) responda lo siguiente.
+Escribe un script que debe estar guardado en `PracUni1Ses3/maices/bin` y llamarse `ExplorandoMaiz.R`, que 1) cargue en R el archivo `PracUni1Ses3/maices/meta/maizteocintle_SNP50k_meta_extended.txt` y 2) responda lo siguiente.
 
 **¿Qué tipo de objeto creamos al cargar la base?**
+
 Se crea un objeto de clase `data.frame`
 
 **¿Cómo se ven las primeras 6 líneas del archivo?**
+
 Se incluye en la salida del script, es una base de datos con 22 variables
 
 **¿Cuántas muestras hay?**
+
 Hay un total de 165 muestras
 
 **¿De cuántos estados se tienen muestras?**
+
 De un total de 16 estados
 
 **¿Cuántas muestras fueron colectadas antes de 1980?**
+
 8 muestras fueron colectadas antes de 1980, luego de remover los NA
 
 **¿Cuántas muestras hay de cada raza?**
-Se puede observar en el codigo, la tabla corresponde a la linea `>table(tabla_maices$Raza)`
+
+Se puede observar en el código, la tabla corresponde a la línea `>table(tabla_maices$Raza)`
 
 **En promedio ¿a qué altitud fueron colectadas las muestras?**
+
 El promedio de altura fue de 1519.242 msnm.
 
 **¿Y a qué altitud máxima y mínima fueron colectadas?**
-La altura minima fue de 5 msnm y la altura maxima fue de 2769 msnm. 
+
+La altura mínima fue de 5 msnm y la altura máxima fue de 2769 msnm.
 
 **Crea una nueva df de datos sólo con las muestras de la raza Olotillo**
 
@@ -218,7 +227,8 @@ La altura minima fue de 5 msnm y la altura maxima fue de 2769 msnm.
 
 **Escribe la matriz anterior a un archivo llamado "submat.cvs" en /meta.**
 
-Los ultimos tres ejercicios se pueden observar en el codigo a continuación
+
+Los últimos tres ejercicios se pueden observar en el código a continuación
 
 ```{r}
 setwd("./PracUni1Ses3/maices/bin")
@@ -226,11 +236,10 @@ setwd("./PracUni1Ses3/maices/bin")
 source("ExplorandoMaiz.R", echo = TRUE, print.eval = TRUE)
 ```
 
-## Ejercicio 10 
+## Ejercicio 10
 
-El resultado del Ejercicio 10 se encuentra en [Wiki/Sesion 1.3](https://github.com/PValenzuela-Carvajal/Tareas_BioinfRepro2026_PIVC/wiki/Notas-Sesi%C3%B3n-1.3)
+El resultado del Ejercicio 10 se encuentra en [Wiki/Sesión 1.3](https://github.com/PValenzuela-Carvajal/Tareas_BioinfRepro2026_PIVC/wiki/Notas-Sesi%C3%B3n-1.3)
 
 ## Conclusión
 
-Realizar estos ejercicios proporcionó una introducción práctica a R con un enfoque en análisis genómicos. Desde la sintaxis básica y las estructuras de datos hasta los bucles, las funciones personalizadas y la gestión de paquetes en R, donde se reforzaron los fundamentos necesarios para realizar un análisis reproducible, incluyendo la construcción de una pagina de wiki para el repositorio.
-
+Realizar estos ejercicios proporcionó una introducción práctica a R con un enfoque en análisis genómicos. Desde la sintaxis básica y las estructuras de datos hasta los bucles, las funciones personalizadas y la gestión de paquetes en R, donde se reforzaron los fundamentos necesarios para realizar un análisis reproducible, incluyendo la construcción de una página de wiki para el repositorio.
