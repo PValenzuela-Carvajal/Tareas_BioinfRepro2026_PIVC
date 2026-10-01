@@ -1,9 +1,13 @@
 # Análisis de calidad de datos NGS
 
 **Estudiante:** Pablo Valenzuela-Carvajal
+
 **Profesor:** Dr. Ricardo Verdugo
+
 **Curso:** Bioinformática e investigación reproducible para análisis genómicos  
+
 **Sesión:** 2.1  
+
 **Fecha:** 2026-09-30
 
 ---
