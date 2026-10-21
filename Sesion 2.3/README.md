@@ -44,7 +44,7 @@ Ningún individuo fue eliminado por tener una tasa de datos perdidos mayor a 0.0
 
 A partir de los histogramas presentados, considero que el umbral propuesto es una decisión adecuada. En el caso de los individuos, la mayoría presenta muy pocos datos perdidos y solo dos se escapan, mostrando más de un 10 % de datos faltantes. Esto podría deberse a una preparación deficiente del ADN o a su degradación, ya que los demás individuos no presentan niveles tan altos.
 
-Respecto a los SNPs, también considero razonable un umbral entre 0.02 y 0.05; sin embargo, evaluaría cuántos SNPs se pierden con cada filtro, ya que si se eliminan demasiados con 0.02, relajaría el criterio. Cabe destacar que esta decisión es contextual y debe responder al objetivo de investigación por el cual se genotipificaron los individuos.
+Respecto a los SNPs, también considero razonable un umbral entre 0.02 y 0.05, sin embargo, evaluaría cuántos SNPs se pierden con cada filtro, ya que si se eliminan demasiados con 0.02, relajaría el criterio. Cabe destacar que esta decisión es contextual y debe responder al objetivo de investigación por el cual se genotipificaron los individuos.
 
 ---
 
@@ -102,7 +102,7 @@ El nombre del archivo es **`plink.hwe`**.
 
 ### ¿Basándose en la distribución de los valores de *p*, le parece el umbral usado razonable o propondría otro valor?
 
-Me parece razonable, ya que el objetivo es detectar errores durante la genotipificación; los valores extremos estarían advirtiendo precisamente sobre este tipo de problemas.
+Me parece razonable, ya que el objetivo es detectar errores durante la genotipificación,los valores extremos estarían advirtiendo precisamente sobre este tipo de problemas.
 
 ---
 
@@ -132,7 +132,7 @@ Fueron eliminados 346 968 SNPs por estar en regiones de inversiones conocidas.
 wc -l chilean_all48_hg19_10.fam
 ```
 
-Quedaron un total de 42 individuos luego del filtro de parentesco; es decir, se eliminaron 3 individuos.
+Quedaron un total de 42 individuos luego del filtro de parentesco, es decir, se eliminaron 3 individuos.
 
 ---
 
@@ -211,7 +211,7 @@ Para K=4: Aparece un cuarto componente que separa la ancestría de AMR. Este es 
 
 Para K=5: Se separa además el componente asiático en dos grupos, lo que puede indicar que existe un sobreajuste de K.
 
-K=6: La fragmentación aumenta; se subdividen componentes que no corresponden a poblaciones ancestrales distintas (dentro de AFR, EUR y ASN). El modelo ya no es parsimonioso, por lo que es probable que exista un sobreajuste.
+K=6: La fragmentación aumenta, se subdividen componentes que no corresponden a poblaciones ancestrales distintas (dentro de AFR, EUR y ASN). El modelo ya no es parsimonioso, por lo que es probable que exista un sobreajuste.
 
 ### Utilice un comando de Unix para extraer los valores de error de validación cruzada a partir de los archivos log.
 
