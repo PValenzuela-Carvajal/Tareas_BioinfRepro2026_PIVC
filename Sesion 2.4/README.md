@@ -63,7 +63,7 @@ f3(f2_blocks, pop1 = target, pop2 = sources, pop3 = sources)
 
 Lo que corresponde a un f3-admixture, donde un estadístico f3 negativo aporta evidencia de que la población objetivo posee una ascendencia relacionada con ambas poblaciones de origen. 
 
-**Tabla 1.  :** f3-admixture de `GBR.DG` para cada par de fuentes.
+**Tabla 1.  ** f3-admixture de `GBR.DG` para cada par de fuentes.
 
 | pop2 (fuente i) | pop3 (fuente j) | est | se | z | p | 
 |---|---|---:|---:|---:|---:|
@@ -77,7 +77,7 @@ Los tres pares únicos de fuentes (Luxembourg-Yamnaya, Luxembourg-Barcin, Yamnay
 
 Resultado de `rankdrop`:
 
-**Tabla 2.  :** qpWave (`rankdrop`) para `GBR.DG` y tres fuentes.
+**Tabla 2.  ** qpWave (`rankdrop`) para `GBR.DG` y tres fuentes.
 
 | f4rank | dof | chisq | p | Interpretación |
 |---:|---:|---:|---:|---|
@@ -91,7 +91,7 @@ El modelo de rango 2 es el primer modelo no rechazado (`p = 0.86`). Se rechazan 
 
 Modelo completo con tres fuentes:
 
-**Tabla 3.  :** qpAdm de tres fuentes para `GBR.DG`.
+**Tabla 3.** qpAdm de tres fuentes para `GBR.DG`.
 
 | Fuente | Peso | SE | z |
 |---|---:|---:|---:|
@@ -103,7 +103,7 @@ La suma de pesos es 1, pero el peso de `Luxembourg_Mesolithic.DG` es negativo, p
 
 El análisis `popdrop` muestra que el mejor modelo factible es el que elimina `Luxembourg_Mesolithic.DG`:
 
-**Tabla 4.  :** `popdrop` con modelos de dos fuentes para `GBR.DG`.
+**Tabla 4.** `popdrop` con modelos de dos fuentes para `GBR.DG`.
 
 | Modelo | Fuentes incluidas | Pesos | p | 
 |---|---|---|---:|
@@ -171,7 +171,7 @@ for (poblacion in target2) {
 
 #### 1. f3 de mezcla: `f3(target; Iran_N, EHG)`
 
-**Tabla 5.  :** f3(target; Iran_N, EHG) en tres grupos esteparios.
+**Tabla 5.** f3(target; Iran_N, EHG) en tres grupos esteparios.
 
 | Target | est | se | z | p |
 |---|---:|---:|---:|---:|
@@ -183,7 +183,7 @@ El resultado es heterogéneo, ya que solo `Russia_LBA_Srubnaya_Alakul.SG` muestr
 
 #### 2. qpWave: número de olas de mezcla
 
-**Tabla 6.  :** qpWave conjunto para Iran_N/EHG y tres targets esteparios.
+**Tabla 6.** qpWave conjunto para Iran_N/EHG y tres targets esteparios.
 
 | Rango (`f4rank`) | gl (`dof`) | χ² | p-valor | 
 |---:|---:|---:|---:|
@@ -198,7 +198,7 @@ El análisis conjunto de qpWave no rechaza los modelos de rango 3 (p = 0.497), r
 
 ##### Russia_MLBA_Sintashta.AG
 
-**Tabla 7.  :** qpAdm de dos fuentes para `Russia_MLBA_Sintashta.AG`.
+**Tabla 7.** qpAdm de dos fuentes para `Russia_MLBA_Sintashta.AG`.
 
 | Fuente | Peso | SE | z |
 |---|---:|---:|---:|
@@ -209,7 +209,7 @@ El análisis conjunto de qpWave no rechaza los modelos de rango 3 (p = 0.497), r
 
 ##### Kazakhstan_Maitan_MLBA_Alakul.AG
 
-**Tabla 8.  :** qpAdm de dos fuentes para `Kazakhstan_Maitan_MLBA_Alakul.AG`.
+**Tabla 8.** qpAdm de dos fuentes para `Kazakhstan_Maitan_MLBA_Alakul.AG`.
 
 | Fuente | Peso | SE | z |
 |---|---:|---:|---:|
@@ -220,7 +220,7 @@ El análisis conjunto de qpWave no rechaza los modelos de rango 3 (p = 0.497), r
 
 ##### Russia_LBA_Srubnaya_Alakul.SG
 
-**Tabla 9.  :** qpAdm de dos fuentes para `Russia_LBA_Srubnaya_Alakul.SG`.
+**Tabla 9.** qpAdm de dos fuentes para `Russia_LBA_Srubnaya_Alakul.SG`.
 
 | Fuente | Peso | SE | z |
 |---|---:|---:|---:|
@@ -292,7 +292,7 @@ for (t in targets3) {
 
 #### 1. qpWave: número de olas o linajes independientes
 
-**Tabla 10.  :** qpWave por target americano (rangos 2 y 1).
+**Tabla 10.** qpWave por target americano (rangos 2 y 1).
 
 | Target | rank 2 (p) | rank 1 (p) | Conclusión |
 |---|---:|---:|---|
@@ -307,7 +307,7 @@ Pima es la única población para la que una única ola de mezcla con dos fuente
 
 ##### Pima.DG
 
-**Tabla 11.  :** qpAdm de dos/tres vías para `Pima.DG`.
+**Tabla 11.** qpAdm de dos/tres vías para `Pima.DG`.
 
 | Modelo | Pesos | p | 
 |---|---|---:|
@@ -319,7 +319,7 @@ El mejor modelo factible para Pima es Beringian + SpiritCave, con ~10% Beringian
 
 ##### Karitiana.DG
 
-**Tabla 12.  :** qpAdm de dos/tres vías para `Karitiana.DG`.
+**Tabla 12.** qpAdm de dos/tres vías para `Karitiana.DG`.
 
 | Modelo | Pesos | p | 
 |---|---|---:|
@@ -331,7 +331,7 @@ Ningún modelo es factible, los pesos del modelo de tres vías son enormes, lo q
 
 ##### Surui.DG
 
-**Tabla 13.  :** qpAdm de dos/tres vías para `Surui.DG`.
+**Tabla 13.** qpAdm de dos/tres vías para `Surui.DG`.
 
 | Modelo | Pesos | p | 
 |---|---|---:|
@@ -343,7 +343,7 @@ Surui.DG sigue el mismo patrón que Karitiana.
 
 ##### PEL.DG
 
-**Tabla 14.  :** qpAdm de dos/tres vías para `PEL.DG`.
+**Tabla 14.** qpAdm de dos/tres vías para `PEL.DG`.
 
 | Modelo | Pesos | p | 
 |---|---|---:|
@@ -415,7 +415,7 @@ admix4_3way <- qpadm(f2_blocks, left = c(target4, sources4),
 
 #### 1. Outgroup-f3 (`f3(Mbuti; IBS, fuente)`)
 
-**Tabla 15.  :** outgroup-f3 de `IBS.DG` con cada fuente.
+**Tabla 15.** outgroup-f3 de `IBS.DG` con cada fuente.
 
 | Fuente | est | se | z | p |
 |---|---:|---:|---:|---:|
@@ -427,7 +427,7 @@ Las tres fuentes muestran deriva compartida significativa con `IBS.DG`. La magni
 
 #### 2. Tests f4 (asimetrías)
 
-**Tabla 16.  :** tests f4 de asimetría para `IBS.DG`.
+**Tabla 16.** tests f4 de asimetría para `IBS.DG`.
 
 | Test | est | se | z | p | 
 |---|---:|---:|---:|---:|
@@ -438,7 +438,7 @@ El primer `f4` es altamente significativo: `IBS.DG` no se comporta como un simpl
 
 #### 3. qpWave
 
-**Tabla 17.  :** qpWave para `IBS.DG` con tres fuentes.
+**Tabla 17.** qpWave para `IBS.DG` con tres fuentes.
 
 | f4rank | dof | chisq | p | 
 |---:|---:|---:|---:|
@@ -450,7 +450,7 @@ Todos los rangos testables son rechazados, incluido el rango 2 (`p = 0.0098`). E
 
 #### 4. qpAdm de 2 vías: `Spain_CA + NA_Berber`
 
-**Tabla 18.  :** qpAdm de dos vías (`Spain_CA + NA_Berber`) para `IBS.DG`.
+**Tabla 18.** qpAdm de dos vías (`Spain_CA + NA_Berber`) para `IBS.DG`.
 
 | Fuente | Peso | SE | z |
 |---|---:|---:|---:|
@@ -461,7 +461,7 @@ Todos los rangos testables son rechazados, incluido el rango 2 (`p = 0.0098`). E
 
 #### 5. qpAdm de 3 vías: `Spain_CA + NA_Berber + YRI`
 
-**Tabla 19.  :** qpAdm de tres vías (`Spain_CA + NA_Berber + YRI`) para `IBS.DG`.
+**Tabla 19.** qpAdm de tres vías (`Spain_CA + NA_Berber + YRI`) para `IBS.DG`.
 
 | Fuente | Peso | SE | z |
 |---|---:|---:|---:|
